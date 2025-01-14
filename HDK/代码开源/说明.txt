@@ -1,0 +1,2 @@
+除STM32外
+其他均采用Arduino IDE或VSCode+PlatFormIO工具
