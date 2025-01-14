@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>01-GPIO\</OutputDirectory>
-          <OutputName>01-GPIO</OutputName>
+          <OutputName>output</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;..\MDK-ARM</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../MDK-ARM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -394,6 +394,16 @@
         <Group>
           <GroupName>Application/User/Core</GroupName>
           <Files>
+            <File>
+              <FileName>bsp_as5600.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp_as5600.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_as5600.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp_as5600.c</FilePath>
+            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
@@ -698,16 +708,6 @@
               <FileName>stm32h7xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32h7xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_as5600.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bsp_as5600.h</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_as5600.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bsp_as5600.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1556,6 +1556,16 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>bsp_as5600.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp_as5600.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_as5600.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp_as5600.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -1604,16 +1614,6 @@
               <FileName>stm32h7xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32h7xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_as5600.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bsp_as5600.h</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_as5600.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bsp_as5600.c</FilePath>
             </File>
           </Files>
         </Group>

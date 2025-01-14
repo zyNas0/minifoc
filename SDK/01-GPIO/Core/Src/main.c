@@ -165,7 +165,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	uint32_t rng;
-	//bsp_as5600Init();
+	bsp_as5600Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -177,13 +177,14 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		HAL_RNG_GenerateRandomNumber(&hrng,&rng);
 		//*(uint32_t*)0x10000000=rng;
-   // HAL_I2C_Master_Transmit();
-		//angle_raw = bsp_as5600GetRawAngle();
-    //angle = bsp_as5600GetAngle();
-		uint8_t data[2];
-		HAL_StatusTypeDef status = HAL_I2C_Master_Receive(&AS5600_I2C_HANDLE, 0x36<<1, data, 2, 10);
+  
+		angle_raw = bsp_as5600GetRawAngle();
+    angle = bsp_as5600GetAngle();
+//		uint8_t data[2];
+//		HAL_StatusTypeDef status = HAL_I2C_Master_Receive(&AS5600_I2C_HANDLE, 0x36<<1, data, 2, 10);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-		HAL_Delay(600);
+		HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET);
+		HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
