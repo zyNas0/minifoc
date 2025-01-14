@@ -1,0 +1,148 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aa ZYjsw88@outlook.com, aa, LIC=ZB4EI-TZA4V-2ZXW4-FIJEQ-F68J4-X7QSM
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  C:\Users\ZYjsw\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\ZYjsw\Documents\0_project\simpleFOC\SDK\01-GPIO\MDK-ARM\01-GPIO.uvprojx
+Project File Date:  01/14/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'C:\Users\ZYjsw\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Build target '01-GPIO'
+compiling st7735_reg.c...
+compiling logo_160_80.c...
+compiling logo_128_160.c...
+compiling st7735.c...
+../BSP/ST7735/lcd.c(59): error: Unknown Screen
+   59 |         #error Unknown Screen
+      |          ^
+../BSP/ST7735/lcd.c(78): error: use of undeclared identifier 'KEY_GPIO_Port'
+   78 |         while (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) != GPIO_PIN_SET)
+      |                                 ^
+../BSP/ST7735/lcd.c(78): error: use of undeclared identifier 'KEY_Pin'
+   78 |         while (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) != GPIO_PIN_SET)
+      |                                                ^
+../BSP/ST7735/lcd.c(93): error: use of undeclared identifier 'KEY_GPIO_Port'
+   93 |         while (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_SET)
+      |                                 ^
+../BSP/ST7735/lcd.c(93): error: use of undeclared identifier 'KEY_Pin'
+   93 |         while (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_SET)
+      |                                                ^
+../BSP/ST7735/lcd.c(287): error: use of undeclared identifier 'LCD_CS_GPIO_Port'
+  287 |         LCD_CS_RESET;
+      |         ^
+../BSP/ST7735/lcd.c(15): note: expanded from macro 'LCD_CS_RESET'
+   15 | #define LCD_CS_RESET    HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_RESET)
+      |                                           ^
+../BSP/ST7735/lcd.c(287): error: use of undeclared identifier 'LCD_CS_Pin'
+../BSP/ST7735/lcd.c(15): note: expanded from macro 'LCD_CS_RESET'
+   15 | #define LCD_CS_RESET    HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_RESET)
+      |                                                            ^
+../BSP/ST7735/lcd.c(288): error: use of undeclared identifier 'LCD_WR_RS_GPIO_Port'
+  288 |         LCD_RS_RESET;
+      |         ^
+../BSP/ST7735/lcd.c(12): note: expanded from macro 'LCD_RS_RESET'
+   12 | #define LCD_RS_RESET    HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_RESET)
+      |                                           ^
+../BSP/ST7735/lcd.c(288): error: use of undeclared identifier 'LCD_WR_RS_Pin'
+../BSP/ST7735/lcd.c(12): note: expanded from macro 'LCD_RS_RESET'
+   12 | #define LCD_RS_RESET    HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_RESET)
+      |                                                               ^
+../BSP/ST7735/lcd.c(290): error: use of undeclared identifier 'LCD_WR_RS_GPIO_Port'
+  290 |         LCD_RS_SET;
+      |         ^
+../BSP/ST7735/lcd.c(11): note: expanded from macro 'LCD_RS_SET'
+   11 | #define LCD_RS_SET      HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_SET)//PC4 
+      |                                           ^
+../BSP/ST7735/lcd.c(290): error: use of undeclared identifier 'LCD_WR_RS_Pin'
+../BSP/ST7735/lcd.c(11): note: expanded from macro 'LCD_RS_SET'
+   11 | #define LCD_RS_SET      HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_SET)//PC4 
+      |                                                               ^
+../BSP/ST7735/lcd.c(293): error: use of undeclared identifier 'LCD_CS_GPIO_Port'
+  293 |         LCD_CS_SET;
+      |         ^
+../BSP/ST7735/lcd.c(14): note: expanded from macro 'LCD_CS_SET'
+   14 | #define LCD_CS_SET      HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_SET)
+      |                                           ^
+../BSP/ST7735/lcd.c(293): error: use of undeclared identifier 'LCD_CS_Pin'
+../BSP/ST7735/lcd.c(14): note: expanded from macro 'LCD_CS_SET'
+   14 | #define LCD_CS_SET      HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_SET)
+      |                                                            ^
+../BSP/ST7735/lcd.c(304): error: use of undeclared identifier 'LCD_CS_GPIO_Port'
+  304 |         LCD_CS_RESET;
+      |         ^
+../BSP/ST7735/lcd.c(15): note: expanded from macro 'LCD_CS_RESET'
+   15 | #define LCD_CS_RESET    HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_RESET)
+      |                                           ^
+../BSP/ST7735/lcd.c(304): error: use of undeclared identifier 'LCD_CS_Pin'
+../BSP/ST7735/lcd.c(15): note: expanded from macro 'LCD_CS_RESET'
+   15 | #define LCD_CS_RESET    HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_RESET)
+      |                                                            ^
+../BSP/ST7735/lcd.c(305): error: use of undeclared identifier 'LCD_WR_RS_GPIO_Port'
+  305 |         LCD_RS_RESET;
+      |         ^
+../BSP/ST7735/lcd.c(12): note: expanded from macro 'LCD_RS_RESET'
+   12 | #define LCD_RS_RESET    HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_RESET)
+      |                                           ^
+../BSP/ST7735/lcd.c(305): error: use of undeclared identifier 'LCD_WR_RS_Pin'
+../BSP/ST7735/lcd.c(12): note: expanded from macro 'LCD_RS_RESET'
+   12 | #define LCD_RS_RESET    HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_RESET)
+      |                                                               ^
+../BSP/ST7735/lcd.c(308): error: use of undeclared identifier 'LCD_WR_RS_GPIO_Port'
+  308 |         LCD_RS_SET;
+      |         ^
+../BSP/ST7735/lcd.c(11): note: expanded from macro 'LCD_RS_SET'
+   11 | #define LCD_RS_SET      HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_SET)//PC4 
+      |                                           ^
+../BSP/ST7735/lcd.c(308): error: use of undeclared identifier 'LCD_WR_RS_Pin'
+../BSP/ST7735/lcd.c(11): note: expanded from macro 'LCD_RS_SET'
+   11 | #define LCD_RS_SET      HAL_GPIO_WritePin(LCD_WR_RS_GPIO_Port,LCD_WR_RS_Pin,GPIO_PIN_SET)//PC4 
+      |                                                               ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling lcd.c...
+"01-GPIO\output.axf" - 19 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32H7xx_DFP.4.0.0.pack
+                Keil::STM32H7xx_DFP@4.0.0
+                STMicroelectronics STM32H7 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_01-GPIO
+  C:/Users/ZYjsw/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
