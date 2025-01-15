@@ -31,6 +31,7 @@
 /* USER CODE BEGIN Includes */
 #include "bsp_as5600.h"
 #include "stm32h7xx_hal.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -166,6 +167,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	uint32_t rng;
 	bsp_as5600Init();
+	LCD_Test();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -175,6 +177,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		uint8_t text[20];
 		HAL_RNG_GenerateRandomNumber(&hrng,&rng);
 		//*(uint32_t*)0x10000000=rng;
   
@@ -183,8 +186,11 @@ int main(void)
 //		uint8_t data[2];
 //		HAL_StatusTypeDef status = HAL_I2C_Master_Receive(&AS5600_I2C_HANDLE, 0x36<<1, data, 2, 10);
 		//HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-		HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET);
-		HAL_Delay(100);
+		//HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET);
+		//HAL_GPIO_TogglePin(LCD_LED_GPIO_Port,LCD_LED_Pin);
+		sprintf((char *)&text, "angle=%5u",angle_raw);
+		LCD_ShowString(4, 4, ST7735Ctx.Width, 16, 16, text);
+		HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

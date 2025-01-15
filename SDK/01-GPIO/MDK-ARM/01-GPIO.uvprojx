@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4107</DriverSelection>
+            <DriverSelection>4101</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H743xx</Define>
+              <Define>USE_HAL_DRIVER,STM32H743xx,TFT96</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../MDK-ARM</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../MDK-ARM;../BSP/ST7735</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1158,7 +1158,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP</GroupName>
+          <GroupName>BSP/LCD</GroupName>
           <Files>
             <File>
               <FileName>lcd.c</FileName>
@@ -1186,6 +1186,9 @@
               <FilePath>..\BSP\ST7735\st7735_reg.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP/FOC</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -1783,7 +1786,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP</GroupName>
+          <GroupName>BSP/LCD</GroupName>
           <Files>
             <File>
               <FileName>lcd.c</FileName>
@@ -1811,6 +1814,9 @@
               <FilePath>..\BSP\ST7735\st7735_reg.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP/FOC</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

@@ -38,6 +38,11 @@
 "01-gpio\stm32h7xx_hal_uart.o"
 "01-gpio\stm32h7xx_hal_uart_ex.o"
 "01-gpio\system_stm32h7xx.o"
+"01-gpio\lcd.o"
+"01-gpio\logo_128_160.o"
+"01-gpio\logo_160_80.o"
+"01-gpio\st7735.o"
+"01-gpio\st7735_reg.o"
 --strict --scatter "01-GPIO\output.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
