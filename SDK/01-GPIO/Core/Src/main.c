@@ -45,7 +45,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+uint32_t pwm_compare = 2000;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -168,6 +168,13 @@ int main(void)
 	uint32_t rng;
 	bsp_as5600Init();
 	LCD_Test();
+     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+			 HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+       HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+       HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+        
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -190,7 +197,23 @@ int main(void)
 		//HAL_GPIO_TogglePin(LCD_LED_GPIO_Port,LCD_LED_Pin);
 		sprintf((char *)&text, "angle=%5u",angle_raw);
 		LCD_ShowString(4, 4, ST7735Ctx.Width, 16, 16, text);
-		HAL_Delay(10);
+		
+	  HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1, 50);
+    uint32_t adc_value = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
+		float voltage = (float)adc_value *5.03547e-5;
+    sprintf((char *)&text, "ADC=%.6fV", voltage);
+    LCD_ShowString(4, 22, ST7735Ctx.Width, 16, 16, text);
+    
+	HAL_Delay(10);
+
+
+     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1,pwm_compare);
+     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2,pwm_compare);
+//__HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3,pwm_compare);
+    // HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+
   }
   /* USER CODE END 3 */
 }
