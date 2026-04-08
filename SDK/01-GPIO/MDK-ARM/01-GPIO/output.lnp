@@ -43,7 +43,7 @@
 "01-gpio\logo_160_80.o"
 "01-gpio\st7735.o"
 "01-gpio\st7735_reg.o"
---strict --scatter "01-GPIO\output.sct"
+--library_type=microlib --strict --scatter "01-GPIO\output.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "output.map" -o 01-GPIO\output.axf
